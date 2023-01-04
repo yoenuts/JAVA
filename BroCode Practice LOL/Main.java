@@ -78,3 +78,24 @@ public class Main {
 } 
 
 **/
+
+//random values
+/** 
+import java.util.Random;
+
+public class Main {
+ 
+    public static void main(String[] args) {
+        //create an instance//
+        Random rand = new Random();
+        //pseudo random
+
+        int x = rand.nextInt(6) + 1;
+        //double y = rand.nextDouble();
+        //boolean z = rand.nextBoolean();
+
+        System.out.println(x);
+    }
+} 
+
+**/
