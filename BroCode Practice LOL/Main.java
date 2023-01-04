@@ -99,3 +99,30 @@ public class Main {
 } 
 
 **/
+//hackerrank if else//
+/** 
+import java.util.*;
+
+public class Main{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+
+        int hack = scan.nextInt();
+
+        if(hack % 2 == 0){
+            if(hack >= 6 && hack <= 20){
+                System.out.println("Weird");
+            }
+            else{
+                System.out.println("Not Weird");
+            }
+        }
+        else{
+            System.out.println("Weird");
+        }
+        2
+        scan.close();
+    }
+}
+
+**/
