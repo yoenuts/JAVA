@@ -120,19 +120,35 @@ public class Main{
         else{
             System.out.println("Weird");
         }
-        2
+        
         scan.close();
     }
 }
-
 **/
+
+//practicing functions and stuff
+
+import java.util.Scanner;
+
 public class Main{
-    public int diff21(int n) {
-        if(n > 21){
-          return (21 - n) * -2;
+    public static void main(String[] args){
+    
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter a value: ");
+        int n = scan.nextInt();
+        scan.close();
+        nearHundred(n);
+    }
+
+    public static boolean nearHundred(int value){
+        if ((Math.abs(100 - value) <= 10) || (Math.abs(200 - value) <= 10)) {
+            System.out.println("Yo");
+            return true;
         }
-        else {
-            return 21 - n;
-        } 
+        else{
+            System.out.println("Mama");
+            return false;
+        }
     }
 }
+
