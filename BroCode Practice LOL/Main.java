@@ -127,7 +127,7 @@ public class Main{
 **/
 
 //practicing functions and stuff
-
+/**
 import java.util.Scanner;
 
 public class Main{
@@ -152,3 +152,26 @@ public class Main{
     }
 }
 
+**/
+
+// at this point i dont et why i have to include return just so i can print out 
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter a word:");
+        String word = new String(scan.nextLine());
+        scan.close();
+        notString(word);
+    }
+
+    public static String notString(String str){
+        if (str.length() >= 3 && str.substring(0, 3).equals("not")) {
+            System.out.println(str);
+            return str;
+        }
+        System.out.println("not "+str);
+        return "not" +str;
+    }
+}
