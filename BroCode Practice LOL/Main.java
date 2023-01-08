@@ -1,160 +1,4 @@
-//These are practice codes from youtube and various sources//
-
-/*Types, Variables and Operators*/
-/** 
-class swap{
-    public static void main(String[] args){
-        String x = "water";
-        String y = "KoolAid";
-        String temp;
-
-        temp = x;
-        x = y;
-        y = temp;
-
-        System.out.println("x: "+x);
-        System.out.println("y: "+y);
-    }
-}
-*/
-
-//I/o hackerrank
-/** 
-import java.util.*;
-
-public class Main {
-
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int a = scanner.nextInt();
-        int b = scanner.nextInt();
-        int c = scanner.nextInt();
-        scanner.close();
-        
-        System.out.println(a);
-        System.out.println(b);
-        System.out.println(c);
-    }
-}
-
-**/
-//I/o 2 hackerrank
-/** 
-import java.util.Scanner;
-
-public class Main {
-
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int lastLine = scanner.nextInt();
-        double secondLine = scanner.nextDouble();
-        scanner.nextLine();
-        String firstLine = scanner.nextLine();
-        scanner.close();
-
-        System.out.println("String: " + firstLine);
-        System.out.println("Double: " + secondLine);
-        System.out.println("Int: " + lastLine);
-    }
-}
-**/ 
-
-//Java GUI
 /**
-import javax.swing.JOptionPane;
-
-public class Main {
- 
-    public static void main(String[] args) {
-        String name = JOptionPane.showInputDialog("Enter your name");
-        JOptionPane.showMessageDialog(null,"Hello " + name);
-
-        int age = Integer.parseInt(JOptionPane.showInputDialog("Enter your age"));
-        JOptionPane.showMessageDialog(null,"You are " + age + " years old.");
-
-        double weight = Double.parseDouble(JOptionPane.showInputDialog("Enter your weight(kg)"));
-        JOptionPane.showMessageDialog(null,"You weigh " + weight + " kg");
-    }
-} 
-
-**/
-
-//random values
-/** 
-import java.util.Random;
-
-public class Main {
- 
-    public static void main(String[] args) {
-        //create an instance//
-        Random rand = new Random();
-        //pseudo random
-
-        int x = rand.nextInt(6) + 1;
-        //double y = rand.nextDouble();
-        //boolean z = rand.nextBoolean();
-
-        System.out.println(x);
-    }
-} 
-
-**/
-//hackerrank if else//
-/** 
-import java.util.*;
-
-public class Main{
-    public static void main(String[] args){
-        Scanner scan = new Scanner(System.in);
-
-        int hack = scan.nextInt();
-
-        if(hack % 2 == 0){
-            if(hack >= 6 && hack <= 20){
-                System.out.println("Weird");
-            }
-            else{
-                System.out.println("Not Weird");
-            }
-        }
-        else{
-            System.out.println("Weird");
-        }
-        
-        scan.close();
-    }
-}
-**/
-
-//practicing functions and stuff
-/**
-import java.util.Scanner;
-
-public class Main{
-    public static void main(String[] args){
-    
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Enter a value: ");
-        int n = scan.nextInt();
-        scan.close();
-        nearHundred(n);
-    }
-
-    public static boolean nearHundred(int value){
-        if ((Math.abs(100 - value) <= 10) || (Math.abs(200 - value) <= 10)) {
-            System.out.println("Yo");
-            return true;
-        }
-        else{
-            System.out.println("Mama");
-            return false;
-        }
-    }
-}
-
-**/
-
-// at this point i dont et why i have to include return just so i can print out 
 import java.util.Scanner;
 public class Main{
     public static void main(String[] args){
@@ -163,15 +7,20 @@ public class Main{
         System.out.println("Enter a word:");
         String word = new String(scan.nextLine());
         scan.close();
-        notString(word);
+        frontBack(word);
     }
-
-    public static String notString(String str){
-        if (str.length() >= 3 && str.substring(0, 3).equals("not")) {
+    //exchange the first and last letters
+    public static String frontBack(String str) {
+        if (str.length() < 2){
+          System.out.println(str);
+          return str;
+        }
+        else {
+            str = str.substring(str.length() - 1) + str.substring(1, str.length()- 1) + str.substring(0, 1); 
             System.out.println(str);
             return str;
         }
-        System.out.println("not "+str);
-        return "not" +str;
     }
-}
+}   
+**/
+
