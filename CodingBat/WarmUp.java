@@ -84,6 +84,7 @@ public class WarmUp{
 }   
 **/
 
+/**
 import java.util.Scanner;
 public class WarmUp{
     public static void main(String[] args){
@@ -104,5 +105,30 @@ public class WarmUp{
         System.out.println(first + first + first);
         return first + first + first;
 
+    }
+} 
+**/
+
+//Given a string, if the string "del" appears starting at index 1, return a string where that "del" has been deleted. Otherwise, return the string unchanged.
+
+
+import java.util.Scanner;
+public class WarmUp{
+    public static void main(String[] args){
+        
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter a word:");
+        String word = new String(scan.nextLine());
+        scan.close();
+        Deldel(word);
+    }
+    //exchange the first and last letters
+    public static String Deldel(String str) {
+        if(str.length() >= 4 && str.substring(1, 4).equals("del")) {
+            System.out.println(str.substring(0, 1) + str.substring(4));
+            return str.substring(0, 1) + str.substring(4);
+        }
+        System.out.println(str);
+        return str;
     }
 } 
