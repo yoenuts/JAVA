@@ -111,7 +111,7 @@ public class WarmUp{
 
 //Given a string, if the string "del" appears starting at index 1, return a string where that "del" has been deleted. Otherwise, return the string unchanged.
 
-
+/***
 import java.util.Scanner;
 public class WarmUp{
     public static void main(String[] args){
@@ -132,3 +132,51 @@ public class WarmUp{
         return str;
     }
 } 
+
+**/
+
+/**
+import java.util.Scanner;
+//simple return the highest value program
+public class WarmUp {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter 3 values");
+        System.out.println("Enter 1st value: ");
+        int a = scan.nextInt();
+        System.out.println("Enter 2nd value: ");
+        int b = scan.nextInt();
+        System.out.println("Enter 3rd value: ");
+        int c = scan.nextInt();
+        scan.close();
+        intMax(a, b, c);
+
+    }
+
+    public static int intMax(int a, int b, int c) {
+        int max;
+        if(a > b) {
+          max = a;
+        }
+        else {
+          max = b;
+        }
+        
+        if (c > max) {
+          max = c;
+        }
+        System.out.println(max);
+        return max;
+        /**
+        if(a > b && c <= a){
+          return a;
+        }
+        if(b > a && c <= b){
+       
+      }   return b;
+        }
+        return c;
+        **/
+    }
+}
+**/
