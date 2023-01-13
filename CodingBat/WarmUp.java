@@ -235,3 +235,7 @@ public boolean or35(int n) {
 }
 // return (n % 3 == 0) || (n % 5 == 0);
 **/
+
+/**public boolean in3050(int a, int b) {
+    return ((a >= 30 || a <= 40) && (b >= 30 || b <= 40)) || (a >= 40 || a <= 50 && b >= 40 || b <= 50);
+  }**/
