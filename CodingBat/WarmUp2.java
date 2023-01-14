@@ -123,12 +123,15 @@ public class WarmUp2 {
         scan.close();
         oddBit(word);
     }
-    public static boolean oddBit(String str) {
-        string result = "";
+    public static String oddBit(String str) {
+        String result = "";
         
         for(int i = 0; i < str.length(); i+=2) {
             result += str.substring(i, i+1);
-    }
+        }
+        
+        System.out.println(result);
         return result;
+    }
 }
 
