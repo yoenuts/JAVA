@@ -57,3 +57,29 @@ public class WarmUp2 {
 }
 **/
 
+//This one's pretty complicated cuz lol im not used to the counting it's complicated
+
+import java.util.Scanner;
+
+public class WarmUp2 {
+    public static void main(String[] args){
+        
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter a word:");
+        String word = new String(scan.nextLine());
+        scan.close();
+        CountXX(word);
+    }
+    public static int CountXX(String str) {
+        int count = 0;
+
+        for(int i = 0; i < str.length()-1; i++) {
+            if (str.substring(i, i + 2).equals("xx")) {
+                count++;
+            }
+        }
+        System.out.println(count);
+        return count;
+    }
+}
+
