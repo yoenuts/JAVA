@@ -112,3 +112,23 @@ public class WarmUp2 {
     }
 }
 **/
+import java.util.Scanner;
+
+public class WarmUp2 {
+    public static void main(String[] args){
+        
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter a word:");
+        String word = new String(scan.nextLine());
+        scan.close();
+        oddBit(word);
+    }
+    public static boolean oddBit(String str) {
+        string result = "";
+        
+        for(int i = 0; i < str.length(); i+=2) {
+            result += str.substring(i, i+1);
+    }
+        return result;
+}
+
