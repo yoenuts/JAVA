@@ -58,7 +58,7 @@ public class WarmUp2 {
 **/
 
 //This one's pretty complicated cuz lol im not used to the counting it's complicated
-
+/**
 import java.util.Scanner;
 
 public class WarmUp2 {
@@ -82,4 +82,33 @@ public class WarmUp2 {
         return count;
     }
 }
+**/
 
+/** 
+import java.util.Scanner;
+
+public class WarmUp2 {
+    public static void main(String[] args){
+        
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter a word:");
+        String word = new String(scan.nextLine());
+        scan.close();
+        CountXX(word);
+    }
+    public static boolean CountXX(String str) {
+        boolean thing = true;
+        int i = str.indexOf("x");
+        if (i == -1 || i + 1 >= str.length()) {
+            thing = false;
+            System.out.println(thing);
+        }    //return false;
+        
+        //return str.substring(i + 1, i + 2).equals("x");
+        if (str.substring(i + 1, i + 2).equals("x")){
+            System.out.println(thing);
+        }
+        return thing;
+    }
+}
+**/
