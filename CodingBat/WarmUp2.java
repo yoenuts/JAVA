@@ -137,25 +137,34 @@ public class WarmUp2 {
 }
 
 **/
-
+/** 
 import java.util.Scanner;
 
-public class WarmUp2 {
-    public static void main(String[] args){
-        
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Enter a word:");
-        String word = new String(scan.nextLine());
-        scan.close();
-        stringSplosion(word);
+public static String stringSplosion(String str) {
+    String add = "";
+    for(int i = 0; i <= str.length(); i++) {
+        add = add + str.substring(0, i);
     }
-    public static String stringSplosion(String str) {
-        String add = "";
-        for(int i = 0; i <= str.length(); i++) {
-            add = add + str.substring(0, i);
-        }
-        System.out.println(add);
-        return add;
+    System.out.println(add);
+    return add;
         
-    }
+
 }
+
+**/
+
+//Introducing .charAt method
+
+/**public String stringYak(String str) {
+  String test = "";
+  for(int i = 0; i < str.length(); i++){
+    if(i+2<str.length()&& str.charAt(i) == 'y' && str.charAt(i+2) == 'k') {
+      i = i+2;
+    }
+    else {
+      test = test + str.charAt(i);
+    }
+  }
+  
+  return test;
+} */
