@@ -112,8 +112,7 @@ public class WarmUp2 {
     }
 }
 **/
-
-
+/** 
 import java.util.Scanner;
 
 public class WarmUp2 {
@@ -137,3 +136,26 @@ public class WarmUp2 {
     }
 }
 
+**/
+
+import java.util.Scanner;
+
+public class WarmUp2 {
+    public static void main(String[] args){
+        
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter a word:");
+        String word = new String(scan.nextLine());
+        scan.close();
+        stringSplosion(word);
+    }
+    public static String stringSplosion(String str) {
+        String add = "";
+        for(int i = 0; i <= str.length(); i++) {
+            add = add + str.substring(0, i);
+        }
+        System.out.println(add);
+        return add;
+        
+    }
+}

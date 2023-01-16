@@ -5,7 +5,6 @@
  - HW * Base Pay * 1.5   40<HW<60 hours
  - print error for base pay below $8, print error for over 60 hours
  */
-
 import java.util.Scanner;
 
 public class FooCorp {
