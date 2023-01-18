@@ -189,3 +189,10 @@ public boolean has271(int[] nums) {
   return false;
 }
  */
+/**
+ // length always starts at 1, so when need last value from an array, must be length - 1.
+ public boolean commonEnd(int[] a, int[] b) {
+  if(a[a.length -1] == b[b.length - 1] || a[0] == b[0]) return true;
+  return false;
+}
+ */
