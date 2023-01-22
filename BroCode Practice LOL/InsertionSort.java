@@ -1,22 +1,27 @@
 public class InsertionSort {
     public static void main(String[] args) {
-        int[] array = {5,4,2,1,3};
-        int temp, j;
-
-        for(int i = 0; i < array.length; i++) {
-            temp = array[i];
-            j = i - 1;
-            while(j >= 0 && temp < array[j]) {
-                array[j+1] = array[j];
+        public int centeredAverage(int[] nums) {
+  
+            int sum = 0, count = 0;
+            int highest, lowest;
+            
+            for(int i = 1; i < nums.length; i++) {
+              temp = nums[i];
+              j = i - 1;
+              while(j >= 0 && temp < nums[j]) {
+                nums[j+1] = nums[j];
                 j--;
+              }
+              nums[j+1] = temp;
             }
-            array[j+1] = temp;
-        }
-
-        for(int i = 0; i < array.length; i++) {
-            System.out.println(array[i]);
-        }
-
-
-    }
+            
+            lowest = nums[0];
+            highest = nums[nums.length];
+            
+            for(int k = 0; k < nums.length; k++) {
+              if(k > 0 && nums[k+1] == lowest || nums[k-1] == highest) {
+                {
+                
+              }
+            }
 }
