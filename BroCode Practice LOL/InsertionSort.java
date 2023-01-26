@@ -3,7 +3,7 @@ public class InsertionSort {
         public int centeredAverage(int[] nums) {
   
             int sum = 0, count = 0;
-            int highest, lowest;
+            int highest, lowest, temp, j;
             
             for(int i = 1; i < nums.length; i++) {
               temp = nums[i];
@@ -18,10 +18,12 @@ public class InsertionSort {
             lowest = nums[0];
             highest = nums[nums.length];
             
-            for(int k = 0; k < nums.length; k++) {
-              if(k > 0 && nums[k+1] == lowest || nums[k-1] == highest) {
-                {
+            for(int k = 1; k < nums.length - 1; k++) {
+              if(k > 1 && k < nums.length && (nums[k] == lowest || nums[k] == highest)) {
+                k++;
                 
               }
-            }
+              sum += nums[i];
+              count++;
+            }**/
 }
