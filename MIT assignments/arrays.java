@@ -14,3 +14,17 @@ public int sum2(int[] nums) {
     return sum;
   }
 **/
+
+/**
+public int[] reverse3(int[] nums) {
+  int[] Array = new int [3];
+  int i = 0, j = nums.length;
+  while(j>0){
+    Array[i] = nums[j - 1];
+    i++;
+    j--;
+  }
+  
+  return Array;
+}
+ */
