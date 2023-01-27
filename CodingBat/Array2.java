@@ -41,14 +41,17 @@ public int centeredAverage(int[] nums) {
 **/
 
 class Array2 {
+  /**
+   * @param args
+   */
   public static void main(String[] args){
-    String[] rank = {"2","3","4","5","6","7","8","9","10","J","Q","K"};
+    String[] rank = {"2","3","4","5","6","7","8","9","10","J","Q","K","A"};
     String[] symbol ={"Clover", "Diamond", "Heart", "Spade"};
 
     String[] deck = new String[52];
 
-    for(int j = 0; j < 4; j++) {
-      for(int i = 0; i < 13; i++) {
+    for(int i = 0; i < 13; i++) {
+      for(int j = 0; j < 4; j++) {
         deck[i + 13*j] = rank[i] + symbol[j];
       }
     }
