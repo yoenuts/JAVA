@@ -1,4 +1,5 @@
 //Theae are my solution to Coding Bat. I'm not necessarily sure if the syntax is correct since I havent gotten so far as to dive into proper syntax for functions.
+/** 
 public class WarmUp {
     public int diff21(int n){
         if(n > 21){
@@ -9,6 +10,7 @@ public class WarmUp {
         }
     }
 }
+**/
 
 
 //Theae are my solution to Coding Bat. I'm not necessarily sure if the syntax is correct since I havent gotten so far as to dive into proper syntax for functions.
@@ -147,7 +149,7 @@ public class WarmUp{
 
 **/
 
-import java.util.Scanner;
+
 //simple return the highest value program
 /**
 public class WarmUp {
@@ -190,7 +192,7 @@ public class WarmUp {
         return c;
         **/
     }
-**/
+/*** 
 
 public class WarmUp{
     public static void main(String[] args){
@@ -221,9 +223,7 @@ public class WarmUp{
         String back  = str.substring(cut);  // this takes from cut to the end
         
         return front + back.toUpperCase();
-      }
-    **/
-}
+**/
 
 
 /**
@@ -239,3 +239,14 @@ public boolean or35(int n) {
 /**public boolean in3050(int a, int b) {
     return ((a >= 30 || a <= 40) && (b >= 30 || b <= 40)) || (a >= 40 || a <= 50 && b >= 40 || b <= 50);
   }**/
+
+import java.util.Scanner;
+class Array2{
+  Public static void main(String[] args) {
+    Scanner scan = new Scanner(System.in);
+    System.out.println("Type a name:");
+    String input = scan.nextLine();
+    scan.close();
+    System.out.println(input);
+  }
+}

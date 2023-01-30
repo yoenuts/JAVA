@@ -1,3 +1,5 @@
+import java.security.PublicKey;
+
 /** 
 //first problem solved!
 class Array2{
@@ -19,31 +21,8 @@ class Array2{
 **/
 
 //second problem
-/** 
-public int centeredAverage(int[] nums) {
-    int sum = 0, count = 0;
-    int largest = nums[0];
-    int minimum = nums[0];
-    for(int i =1;i < nums.length; i++) {
-      largest = Math.max(largest, nums[i]);
-      minimum = Math.min(minimum, nums[i]);
-    }
-    
-    for(int i = 0; i < nums.length; i++) {
-      if(nums[i] != largest || nums[i] != minimum) {
-        sum = sum + nums[i];
-        count++;
-      }
-    }
-    
-    return sum/count;
-  }
-**/
-
+/**
 class Array2 {
-  /**
-   * @param args
-   */
   public static void main(String[] args){
     String[] rank = {"2","3","4","5","6","7","8","9","10","J","Q","K","A"};
     String[] symbol ={"Clover", "Diamond", "Heart", "Spade"};
@@ -62,4 +41,19 @@ class Array2 {
     }
   }
 }
+*/
+import java.util.Scanner;
+class Array2{
+  Public static void main(String[] args) {
+    Scanner scan = new Scanner(System.in);
+    System.out.println("Type a name:");
+    String input = scan.nextLine();
+    scan.close();
+    System.out.println(input);
+  }
+}
+
+int[] new = int[10];
+
+
 

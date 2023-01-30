@@ -59,25 +59,23 @@ public class Main {
 }
 **/ 
 
-//Java GUI
-/**
 import javax.swing.JOptionPane;
 
 public class Main {
  
     public static void main(String[] args) {
-        String name = JOptionPane.showInputDialog("Enter your name");
-        JOptionPane.showMessageDialog(null,"Hello " + name);
+        String name = JOptionPane.showInputDialog("Student Name");
+        JOptionPane.showMessageDialog(null,name);
 
-        int age = Integer.parseInt(JOptionPane.showInputDialog("Enter your age"));
-        JOptionPane.showMessageDialog(null,"You are " + age + " years old.");
+        String program = JOptionPane.showInputDialog("Program:");
+        JOptionPane.showMessageDialog(null,progam);
 
-        double weight = Double.parseDouble(JOptionPane.showInputDialog("Enter your weight(kg)"));
-        JOptionPane.showMessageDialog(null,"You weigh " + weight + " kg");
+        int number = Integer.parseInt(JOptionPane.showInputDialog("Enter ID Number"));
+        JOptionPane.showMessageDialog(null,number);
     }
 } 
 
-**/
+
 
 //random values
 /** 
@@ -153,7 +151,7 @@ public class Main{
 }
 
 **/
-
+/** 
 // at this point i dont et why i have to include return just so i can print out 
 import java.util.Scanner;
 public class Main{
@@ -174,4 +172,13 @@ public class Main{
         System.out.println("not "+str);
         return "not" +str;
     }
+
+    public static void main(String[ args]) {
+      String Chris = "Chris";
+    
+      System.out.print("Hello" + Chris);
+      System.out.println();
+    }
+    
 }
+**/
