@@ -42,6 +42,7 @@ class Array2 {
   }
 }
 */
+/* 
 import java.util.Scanner;
 class Array2{
   Public static void main(String[] args) {
@@ -52,8 +53,26 @@ class Array2{
     System.out.println(input);
   }
 }
+*/
 
-int[] new = int[10];
+//hehe got a star for this
+public boolean no14(int[] nums) {
+  int one = 0;
+  int four = 0;
+  
+  for(int i = 0; i < nums.length; i++) {
+    if(nums[i] == 1) {
+      one++;
+    }
+    if(nums[i] == 4) {
+      four++;
+    }
+  }
+  
+  if(one >= 1 && four >= 1) return false;
+  
+  return true;
+}
 
 
 
