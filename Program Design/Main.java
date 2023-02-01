@@ -1,4 +1,4 @@
-import java.util.Scanner;
+
 
 // formatting output with printf
 
@@ -92,11 +92,14 @@ public class Main{
     }
 }
 **/
-import java.util.*;
+
+
+import java.util.Scanner;
 import java.io.*;
 //file input and output
+//using Scanner FileReader and Print Writer
 public class Main{
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException{
 
         Scanner inFile = new Scanner(new FileReader("employeeData.txt"));
         String firstName;
@@ -107,9 +110,19 @@ public class Main{
         double wages;
 
         firstName = inFile.next();
-        
+        lastName = inFile.next();
+        hoursWorked = inFile.nextDouble();
+        payRate = inFile.nextDouble();
 
-        
+        wages = hoursWorked + payRate;
+
+        PrintWriter outFile = new PrintWriter("prog.out");
+
+        outFile.println("The paycheck is: $" + wages);
+
+        inFile.close();
+        outFile.close();
+
     }
 }
 
