@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 // formatting output with printf
 
 /**
@@ -52,8 +54,9 @@ public class Main{
 
 //HAHHAHA ANG SAYA OK
 
-import javax.swing.JOptionPane;
+
 /*
+import javax.swing.JOptionPane;
 public class Main{
     public static void main(String[] args) {
         String name = JOptionPane.showInputDialog("Enter your name and press OK.");
@@ -64,7 +67,7 @@ public class Main{
 }
 */
 //Circle Calculator
-
+/** 
 public class Main{
     public static void main(String[] args) {
         double radius;
@@ -80,13 +83,40 @@ public class Main{
         area = Math.PI * radius * radius;
         circumference = 2 * Math.PI * radius;
 
-        outputStr = "Radius: " + radius + "\n" +
-            "Area: " + area + "square units\n" +
-            "Circumference: " + circumference + " units";
+        outputStr = String.format("Radius: %.2f%n", radius) +
+            String.format("Area: %.2f square units%n", area) +
+            String.format("Circumference: %.2f units%n", circumference);
 
         JOptionPane.showMessageDialog(null, outputStr, "Circle", JOptionPane.INFORMATION_MESSAGE);
         System.exit(0); 
     }
 }
+**/
+import java.util.*;
+import java.io.*;
+//file input and output
+public class Main{
+    public static void main(String[] args) {
+
+        Scanner inFile = new Scanner(new FileReader("employeeData.txt"));
+        String firstName;
+        String lastName;
+
+        double hoursWorked;
+        double payRate;
+        double wages;
+
+        firstName = inFile.next();
+        
+
+        
+    }
+}
+
+
+
+
+
+
 
 
