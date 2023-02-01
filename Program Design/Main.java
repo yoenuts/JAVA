@@ -93,11 +93,9 @@ public class Main{
 }
 **/
 
-
-import java.util.Scanner;
-import java.io.*;
+/**
 //file input and output
-//using Scanner FileReader and Print Writer
+//using Scanner FileReader and PrintWriter
 public class Main{
     public static void main(String[] args) throws FileNotFoundException{
 
@@ -114,7 +112,7 @@ public class Main{
         hoursWorked = inFile.nextDouble();
         payRate = inFile.nextDouble();
 
-        wages = hoursWorked + payRate;
+        wages = hoursWorked * payRate;
 
         PrintWriter outFile = new PrintWriter("prog.out");
 
@@ -125,6 +123,8 @@ public class Main{
 
     }
 }
+**/
+
 
 
 
