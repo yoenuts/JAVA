@@ -35,3 +35,34 @@ public class Main{
 }
 
 **/
+
+//parsing numeric strings
+//when a string contains only an int or a float it is a numeric string. Java has methods to convert numeric string into numeric form
+
+/**
+public class Main{
+    public static void main(String[] args) {
+        String thing = "12345";
+        String thing2 = "12345";
+
+        System.out.print(Integer.parseInt(thing) + Integer.parseInt(thing2));
+    }
+}
+**/
+
+//HAHHAHA ANG SAYA OK
+
+import javax.swing.JOptionPane;
+
+public class Main{
+    public static void main(String[] args) {
+        String name = JOptionPane.showInputDialog("Enter your name and press OK.");
+        JOptionPane.showMessageDialog(null, "Hello " + name, "Welcome", JOptionPane.PLAIN_MESSAGE);
+
+        //information, warning, plain and question
+
+
+    }
+}
+
+
