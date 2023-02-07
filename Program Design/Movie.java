@@ -4,6 +4,15 @@ import java.io.*;
 
 public class Movie{
     public static void main(String[] args) throws FileNotFoundException{
+        //**********************************************************
+        // written 01/02/2023
+        // Program: Movie ticket sale and donation to charity
+        //This program utilizes file input/output and prompts user to input values using
+        //simple JOptionPane simple Dialog box
+        //Erlein got the idea from a book and had so much fun!
+        // note: you will need a file "ticketPrice" containing the adult and child ticket 
+        // price in decimal format, in one line seperate by a single space, for this to work.
+        //**********************************************************
         //Step 1: get movie name
         String movieName;
         String inputStr;
@@ -46,7 +55,6 @@ public class Movie{
         String.format("Net Sale: %.2f%n", netSaleAmount);
 
         JOptionPane.showMessageDialog(null, outputStr, "Movie Ticket Sale and Donation to Charity", JOptionPane.INFORMATION_MESSAGE);
-
         PrintWriter outFile = new PrintWriter("Movie.out");
 
         outFile.printf("Movie Name : %s%n", movieName);
@@ -56,6 +64,8 @@ public class Movie{
 
         inFile.close();
         outFile.close();
-
+        System.exit(0);
     }
 }
+
+
