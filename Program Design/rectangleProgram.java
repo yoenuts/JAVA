@@ -1,3 +1,5 @@
+//first java frame program!
+
 import javax.swing.*;
 
 public class rectangleProgram extends JFrame {
