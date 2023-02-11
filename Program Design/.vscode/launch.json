@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch TempConversion",
+            "request": "launch",
+            "mainClass": "TempConversion",
+            "projectName": "Program Design_3bb665eb"
+        },
+        {
+            "type": "java",
             "name": "Launch RectangleProgram",
             "request": "launch",
             "mainClass": "RectangleProgram",
