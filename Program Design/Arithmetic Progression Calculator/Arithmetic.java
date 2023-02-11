@@ -129,16 +129,16 @@ public class Arithmetic {
                 switch(missingTerm) {
                      
                     case 1 : // missing N
-                    inputStr = JOptionPane.showInputDialog("To solve for N, Enter the the common difference: ");
-                    commonDifference = Double.parseDouble(inputStr);
+                    inputStr = JOptionPane.showInputDialog("To solve for N, Enter the first term: ");
+                    firstTerm = Double.parseDouble(inputStr);
                     inputStr = JOptionPane.showInputDialog("Enter Sum of Terms: ");
                     sumOfTerms = Double.parseDouble(inputStr);
-                    inputStr = JOptionPane.showInputDialog("Enter N: ");
-                    valueOFn = Double.parseDouble(inputStr);
+                    inputStr = JOptionPane.showInputDialog("Enter Last Term: ");
+                    secondTerm = Double.parseDouble(inputStr);
 
-                    firstTerm = (sumOfTerms / valueOFn) - (((commonDifference * valueOFn) - commonDifference) / 2);
-                    outputStr = String.format("The first term is %.2f", firstTerm);
-                    JOptionPane.showMessageDialog(null, outputStr, "First term", JOptionPane.INFORMATION_MESSAGE);
+                    valueOFn = (2 * sumOfTerms) / (firstTerm + secondTerm);
+                    outputStr = String.format("The value of N is %.2f ", valueOFn);
+                    JOptionPane.showMessageDialog(null, outputStr, "Value of N", JOptionPane.INFORMATION_MESSAGE);
                     break;
                     
                     case 2 : // missing first term
@@ -168,6 +168,7 @@ public class Arithmetic {
                     break;
                 }
             }
+            // Sum of terms solution 1
             else if(caseA == 2) {
                 inputStr = JOptionPane.showInputDialog("To solve for Sum of Terms, Enter Last Term: ");
                 secondTerm = Double.parseDouble(inputStr);
@@ -182,6 +183,7 @@ public class Arithmetic {
                 
             }
             
+            //sum of terms solution 2
             else if(caseA == 3){
                 inputStr = JOptionPane.showInputDialog("To solve for Sum of Terms, Enter common difference: ");
                 commonDifference = Double.parseDouble(inputStr);
