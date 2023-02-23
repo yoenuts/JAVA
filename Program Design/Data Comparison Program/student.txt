@@ -1,0 +1,15 @@
+Course ID  Group No.  Course Average
+  CSC           1           90.60
+                2           90.60
+
+  ENG           1           87.00
+                2           87.00
+
+  MAT           1           89.20
+                2           89.20
+
+  PHY           1           83.57
+                2           83.57
+
+Avg for Group 1: 87.59
+Avg for Group 2: 87.59
