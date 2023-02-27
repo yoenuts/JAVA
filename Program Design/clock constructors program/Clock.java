@@ -2,6 +2,9 @@
  * Constructors
  */
 public class Clock {
+    private int hr;
+    private int min;
+    private int sec;
 
     public void setTime(int hours, int minutes, int seconds) {
         if (hours >= 0 && hours < 24) {
@@ -26,6 +29,14 @@ public class Clock {
         }
     }
 
+    public Clock(){
+        setTime(0,0,0);
+    }
+
+    public Clock(int hours, int minutes, int seconds){
+        setTime(hours, minutes, seconds);
+    }
+
     public int getHours(){
         return hr;
     }
@@ -39,6 +50,7 @@ public class Clock {
     }
 
     public void printTime(){
+        
         if(hr < 10) {
             System.out.print("0");
             System.out.print(hr + ":");
@@ -51,6 +63,8 @@ public class Clock {
             System.out.print("0");
             System.out.print(sec);
         }
+
+        System.out.println(hr + ": " + min + ": " + sec);
     }
 
     public void incrementHours() {
@@ -93,6 +107,10 @@ public class Clock {
         temp.hr = hr;
         temp.min = min;
         temp.sec = sec;
+
+        return temp;**/
+
+        Clock temp = new Clock(hr, min, sec);
 
         return temp;
     }
