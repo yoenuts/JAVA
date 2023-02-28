@@ -44,8 +44,16 @@ public class Main {
 
         myClock.incrementHours();
 
-        System.out.println("Your new clock time after incrementing: ");
+        System.out.println("Your new clock time after incrementing hours2: ");
         myClock.printTime();
+
+        myClock.incrementMinutes();
+
+        System.out.println();
+        System.out.println("Your new clock time after incrementing mins: ");
+        myClock.printTime();
+
+
 
 
     }
