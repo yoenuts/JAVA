@@ -55,16 +55,25 @@ public class Clock {
             System.out.print("0");
             System.out.print(hr + ":");
         }
+        else{
+            System.out.print(hr + ":");
+        }
+
         if(min < 10) {
             System.out.print("0");
+            System.out.print(min + ":");
+        }
+        else{ 
             System.out.print(min + ":");
         }
         if(sec < 10) {
             System.out.print("0");
             System.out.print(sec);
         }
+        else{
+            System.out.print(sec);
+        }
 
-        System.out.println(hr + ": " + min + ": " + sec);
     }
 
     public void incrementHours() {
@@ -92,8 +101,6 @@ public class Clock {
         return (hr == otherClock.hr 
         && min == otherClock.min 
         && sec == otherClock.sec);
-
-
     }
 
     public void makeCopy(Clock otherClock) {
@@ -103,17 +110,17 @@ public class Clock {
     }
 
     public Clock getCopy() {
-       /** Clock temp = new Clock();
-        temp.hr = hr;
-        temp.min = min;
-        temp.sec = sec;
-
-        return temp;**/
-
         Clock temp = new Clock(hr, min, sec);
-
         return temp;
     }
 
+    public void makeCopy() {
+
+        Clock Clocks = new Clock();
+
+        hr = Clocks.hr;
+        min = Clocks.min;
+        sec = Clocks.sec;
+    }
 
 }
