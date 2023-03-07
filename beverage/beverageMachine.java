@@ -6,7 +6,6 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 
-import java.io.*;
 
 
 public class beverageMachine extends JFrame {
