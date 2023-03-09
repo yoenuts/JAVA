@@ -4,6 +4,7 @@ import java.awt.*;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.SwingConstants;
 
 
@@ -53,6 +54,15 @@ public class beverageMachine extends JFrame {
         if(product.getCount() > 0){
             price = product.getProductCost();
             coinsRequired = price - coinsInserted;
+            while (coinsRequired > 0) {
+                str = JOptionPane.showInputDialog("To buy " + productName + " please insert " + coinsRequired);
+                coinsInserted = coinsInserted + Integer.parseInt(str);
+                coinsRequired = price - coinsInserted;
+                //give change if coin inserted is greater than the cost
+                if(coinsInserted > coinsRequired) {
+                    run
+                }
+            }
         }
     }
 
@@ -60,8 +70,13 @@ public class beverageMachine extends JFrame {
 
     //now i gotta create a listener for all that button UGH
     
-
+    //main method stock sum stuff
     public static void main(String[] args){
+        CashRegister cashRegister = new CashRegister(1000);
+        Dispenser Soda = new Dispenser(40, 20);
+        Dispenser Coffee = new Dispenser(20, 15);
+        Dispenser energyDrink = new Dispenser(20, 25);
+        Dispenser juice = new Dispenser(50, 10);
         beverageMachine run = new beverageMachine();
     }
 
