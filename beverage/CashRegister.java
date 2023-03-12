@@ -1,4 +1,3 @@
-package beverage;
 
 // in GC the vending machines finally work and a program is needed to make it
 //function properly. The machine sells coffee, soda, juice and energy drink.

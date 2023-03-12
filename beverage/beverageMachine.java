@@ -1,7 +1,7 @@
-package beverage;
 import java.util.*;
 import java.awt.*;
 import javax.swing.*;
+import java.awt.event.*;
 
 // ugyyu
 public class beverageMachine extends JFrame {
@@ -9,15 +9,18 @@ public class beverageMachine extends JFrame {
     private JLabel selectItem;
     private JButton sodaB, juiceB, energyB, coffeeB, exitB;
     //ButtonHandler
-    private ButtonHandler pbutton;
+    private ButtonHandler pbutton = new ButtonHandler();
+
+    //
+    CashRegister theCash = new CashRegister(1000);
+    Dispenser Soda = new Dispenser(40, 20);
+    Dispenser Coffee = new Dispenser(20, 15);
+    Dispenser energyDrink = new Dispenser(20, 25);
+    Dispenser juice = new Dispenser(50, 10);
+
     //main method stock sum stuff
     public static void main(String[] args){
-        CashRegister theCash = new CashRegister(1000);
-        Dispenser Soda = new Dispenser(40, 20);
-        Dispenser Coffee = new Dispenser(20, 15);
-        Dispenser energyDrink = new Dispenser(20, 25);
-        Dispenser juice = new Dispenser(50, 10);
-        beverageMachine run = new beverageMachine();
+        beverageMachine machine = new beverageMachine();
     }
 
     public beverageMachine() {
@@ -56,7 +59,7 @@ public class beverageMachine extends JFrame {
     }
     //create the selling method ofc
 
-    public void sellProduct(Dispenser product, String productName) {
+    public void sellProduct(Dispenser product, String productName, CashRegister cash) {
         double coinsInserted = 0;
         double price;
         double coinsRequired;
@@ -73,6 +76,7 @@ public class beverageMachine extends JFrame {
                 //give change if coin inserted is greater than the cost
                 if(coinsInserted > coinsRequired) {
                     change = coinsInserted - coinsRequired;
+                    cash.makeChange(coinsInserted, coinsRequired);
                     str = String.format("Your change is %.2f", change);
                     JOptionPane.showMessageDialog(null, str, "Change", JOptionPane.INFORMATION_MESSAGE);
                     coinsInserted = coinsInserted - change;
@@ -80,7 +84,7 @@ public class beverageMachine extends JFrame {
                 coinsRequired = price - coinsInserted;
             }
             //idk why this is showing an error
-            theCash.acceptMoney(coinsInserted);
+            cash.acceptMoney(coinsInserted);
             product.makeSale();
 
             str = "Enjoy your " + productName + "!";
@@ -104,22 +108,22 @@ public class beverageMachine extends JFrame {
     // formal parameter e is a reference variable to ActionEventtype The class ActionEvent
     //contains getActionCommand(YOHOO FINALLY UNDERSTAND Y THEY USE THIS)
     //used to identify which button generated the event.
-    public class ButtonHandler implements ActionListener {
-        public void ActionPerformed(ActionEvent e) {
-            if(e.getActionCommand.equals("Exit")){
+    private class ButtonHandler implements ActionListener {
+        public void actionPerformed (ActionEvent e) {
+            if(e.getActionCommand().equals("Exit")){
                 System.exit(0);
             }
-            else if(e.getActionCommand.equals("Coffee")){
-                sellProduct(Coffee, "Coffee");
+            else if(e.getActionCommand().equals("Coffee")){
+                sellProduct(Coffee, "Coffee", theCash);
             }
-            else if(e.getActionCommand.equals("Juice")){
-                sellProduct(juice, "Juice");
+            else if(e.getActionCommand().equals("Juice")){
+                sellProduct(juice, "Juice", theCash);
             }
-            else if(e.getActionCommand.equals("Energy Drink")){
-                sellProduct(energyDrink, "Energy Drink");
+            else if(e.getActionCommand().equals("Energy Drink")){
+                sellProduct(energyDrink, "Energy Drink", theCash);
             }
-            else if(e.getActionCommand.equals("Soda")){
-                sellProduct(Soda, "Soda");
+            else if(e.getActionCommand().equals("Soda")){
+                sellProduct(Soda, "Soda", theCash);
             }
 
         }

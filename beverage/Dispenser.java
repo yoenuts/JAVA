@@ -1,5 +1,3 @@
-package beverage;
-
 public class Dispenser {
     
     private int numberOfItems;
